@@ -3,7 +3,6 @@ LEFT JOIN order_items oi
   ON p.product_id = oi.product_id 
     AND oi.quantity > 0; -- Aplica o filtro na condição de junção
 
-
 SELECT * 
 FROM (
     SELECT 
