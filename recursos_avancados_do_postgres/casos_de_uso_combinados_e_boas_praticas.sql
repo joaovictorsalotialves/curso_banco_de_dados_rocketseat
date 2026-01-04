@@ -4,7 +4,7 @@ CREATE TEMPORARY TABLE tmp_vendas_2024 AS
 
 CREATE VIEW vw_summary_2024 AS 
   SELECT 
-    date_trunc('quarter', order_date) AS trimestre, 
+    date_trunc('quarter', order_date) AS trimestre,  
     COUNT (*) AS qtd_pedidos, 
     SUM(total_amount) AS total_vendas 
   FROM tmp_vendas_2024 
