@@ -75,4 +75,8 @@ RETURNS TEXT AS $$
     RAISE; 
   END; $$ LANGUAGE plpgsql;
 
-SELECT fn_create_order(2, '[{"product_id": 97, "quantity": 2, "unit_price": 10.50}, {"product_id": 98, "quantity": 1, "unit_price": 5.00}, {"product_id": 99, "quantity": 4, "unit_price": 2.25}]' :: json ) AS resultado;
+SELECT fn_create_order(2, '[
+  {"product_id": 97, "quantity": 2, "unit_price": 10.50}, 
+  {"product_id": 98, "quantity": 1, "unit_price": 5.00}, 
+  {"product_id": 99, "quantity": 4, "unit_price": 2.25}
+]'::json) AS resultado;
