@@ -17,7 +17,6 @@ $$;
 
 CALL sp_create_loan(124, 46, 14);
 
-
 DO $$
   BEGIN
     INSERT INTO loans(copy_id, member_id, loan_date, due_date)
